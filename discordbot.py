@@ -15,8 +15,8 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 @bot.command()
-async def roll(ctx):
-    rnd = random.randrange(1, 100)
+async def roll(ctx, cap):
+    rnd = random.randrange(1, int(cap))
     await ctx.send(rnd)
 
 bot.run(token)
