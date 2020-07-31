@@ -16,6 +16,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def roll(ctx, cap):
+    cap = cap if cap or 100
     rnd = random.randrange(1, int(cap))
     await ctx.send(rnd)
 
