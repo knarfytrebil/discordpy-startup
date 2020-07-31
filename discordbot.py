@@ -5,6 +5,7 @@ import random
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
 There are a number of utility commands being showcased here.'''
+token = os.environ['DISCORD_BOT_TOKEN']
 bot = commands.Bot(command_prefix='?', description=description)
 
 @bot.event
@@ -60,4 +61,4 @@ async def _bot(ctx):
     """Is the bot cool?"""
     await ctx.send('Yes, the bot is cool.')
 
-bot.run('token')
+bot.run(token)
