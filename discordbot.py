@@ -15,7 +15,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
     
 @bot.event
-async def on_member_join(ctx, member):
+async def on_member_join(member):
     guild = member.guild
     if guild.system_channel is not None:
         to_send = 'Welcome {0.mention} to {1.name}!'.format(member, guild)
